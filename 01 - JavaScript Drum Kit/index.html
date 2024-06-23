@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01 - JavaScript Drum Kit</title>
+    <style>
+      body {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .content_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; height: 100%;
+        background-image: url("./img/background.jpg");
+      }
+      .keys {
+        display: flex;
+        gap: 15px;
+      }
+
+      .key {
+        width: 75px;
+        padding: 25px;
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        text-align: center;
+        border: 2px solid #fff;
+        border-radius: 3px;
+        transition: all .1s;
+      }
+      .key kbd {
+        display: block;
+        color: #fff;
+        font-size: 28px;
+      }
+      .key span {
+        text-transform: uppercase;
+        color: yellow;
+      }
+      .key.playing {
+        border-color: yellow;
+        box-shadow: 1px 3px 4px yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content_wrapper">
+      <div class="keys">
+        <div data-key="65" class="key">
+          <kbd>A</kbd>
+          <span class="sound">clap</span>
+        </div>
+        <div data-key="83" class="key">
+          <kbd>S</kbd>
+          <span class="sound">hihat</span>
+        </div>
+        <div data-key="68" class="key">
+          <kbd>D</kbd>
+          <span class="sound">kick</span>
+        </div>
+        <div data-key="70" class="key">
+          <kbd>F</kbd>
+          <span class="sound">openhat</span>
+        </div>
+        <div data-key="71" class="key">
+          <kbd>G</kbd>
+          <span class="sound">boom</span>
+        </div>
+        <div data-key="72" class="key">
+          <kbd>H</kbd>
+          <span class="sound">ride</span>
+        </div>
+        <div data-key="74" class="key">
+          <kbd>J</kbd>
+          <span class="sound">snare</span>
+        </div>
+        <div data-key="75" class="key">
+          <kbd>K</kbd>
+          <span class="sound">tom</span>
+        </div>
+        <div data-key="76" class="key">
+          <kbd>L</kbd>
+          <span class="sound">tink</span>
+        </div>
+      </div>
+    </div>
+
+    <audio data-key="65" src="./sounds/clap.wav"></audio>
+    <audio data-key="83" src="./sounds/hihat.wav"></audio>
+    <audio data-key="68" src="./sounds/kick.wav"></audio>
+    <audio data-key="70" src="./sounds/openhat.wav"></audio>
+    <audio data-key="71" src="./sounds/boom.wav"></audio>
+    <audio data-key="72" src="./sounds/ride.wav"></audio>
+    <audio data-key="74" src="./sounds/snare.wav"></audio>
+    <audio data-key="75" src="./sounds/tom.wav"></audio>
+    <audio data-key="76" src="./sounds/tink.wav"></audio>
+
+    <script src="./scripts.js">
+    </script>
+  </body>
+</html>
